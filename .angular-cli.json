@@ -53,7 +53,7 @@
     }
   ],
   "project": {
-    "name": "next"
+    "name": "component-events"
   },
   "test": {
     "karma": {
