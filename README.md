@@ -1,4 +1,4 @@
-# Angular Boot Camp example: PROJECT_NAME
+# Angular Boot Camp example: component-inputs
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for PROJECT_NAME](https://stackblitz.io/github/AngularBootCamp/PROJECT_NAME)**
+**[StackBlitz for component-inputs](https://stackblitz.io/github/AngularBootCamp/component-inputs)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/PROJECT_NAME.git
-cd PROJECT_NAME
+git clone git@github.com:AngularBootCamp/component-inputs.git
+cd component-inputs
 npm install
 npm start
 ```
