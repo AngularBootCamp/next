@@ -1,4 +1,4 @@
-# Angular Boot Camp example: PROJECT_NAME
+# Angular Boot Camp example: legacy-observable-composing-and-chaining
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for PROJECT_NAME](https://stackblitz.io/github/AngularBootCamp/PROJECT_NAME)**
+**[StackBlitz for legacy-observable-composing-and-chaining](https://stackblitz.io/github/AngularBootCamp/legacy-observable-composing-and-chaining)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/PROJECT_NAME.git
-cd PROJECT_NAME
+git clone git@github.com:AngularBootCamp/legacy-observable-composing-and-chaining.git
+cd legacy-observable-composing-and-chaining
 npm install
 npm start
 ```

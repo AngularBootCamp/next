@@ -53,7 +53,7 @@
     }
   ],
   "project": {
-    "name": "next"
+    "name": "legacy-observable-composing-and-chaining"
   },
   "test": {
     "karma": {
