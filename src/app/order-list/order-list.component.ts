@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Order } from '../api-types';
 
@@ -7,7 +7,7 @@ import { Order } from '../api-types';
   templateUrl: './order-list.component.html'
 })
 export class OrderListComponent {
-  @Input() orders: Order[];
+  @Input() orders: Order[] = [];
 
   @Output() selectOrder = new EventEmitter<Order>();
 

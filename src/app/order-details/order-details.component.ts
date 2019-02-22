@@ -7,5 +7,5 @@ import { Order } from '../api-types';
   templateUrl: './order-details.component.html'
 })
 export class OrderDetailsComponent {
-  @Input('selectedOrderDetails') sod: Order;
+  @Input('selectedOrderDetails') sod: Order | undefined;
 }
