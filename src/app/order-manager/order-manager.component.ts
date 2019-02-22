@@ -7,12 +7,8 @@ import { Order, fakeApiOrderData } from '../api-types';
   templateUrl: './order-manager.component.html'
 })
 export class OrderManagerComponent {
-  orderList: Order[];
-  selectedOrder: Order;
-
-  constructor() {
-    this.orderList = fakeApiOrderData;
-  }
+  orderList: Order[] = fakeApiOrderData;
+  selectedOrder: Order | undefined;
 
   choose(i: number) {
     this.selectedOrder = this.orderList[i];
