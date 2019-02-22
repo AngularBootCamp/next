@@ -11,7 +11,7 @@
       <ul class="collection">
         <li class="collection-item" *ngFor="let employee of employeeList">
           <strong>{{employee.name}}</strong>
-          <div *ngFor="let role of employee.roles; let i = index">
+          <div *ngFor="let role of employee.roles; index as i">
             <span *ngIf="showInactiveRoles || i === 0">{{role}}</span>
           </div>
         </li>

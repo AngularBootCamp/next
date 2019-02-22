@@ -1,20 +1,22 @@
 <div class="two-across">
 
-  <section class="card">
+  <section class="card profile">
     <div class="card-content">
       <div class="card-title">Profile</div>
-      <div *ngIf="showProfile">
+      <div class="pad-around" *ngIf="showProfile">
         Phone number: 555-123-1345 <br>
         Email address: test@abccompany.com <br>
         Address: 1 Main Street, St. Louis, MO 63105 <br>
       </div>
     </div>
     <div class="card-action">
-      <button class="btn" (click)="showProfile = !showProfile">{{ showProfile ? 'Hide' : 'Show'}} Profile</button>
+      <button class="btn" (click)="showProfile = !showProfile">
+        {{ showProfile ? 'Hide' : 'Show'}} Profile
+      </button>
     </div>
   </section>
 
-  <section class="card">
+  <section class="card todo">
     <div class="card-content">
       <div class="card-title">Todo List</div>
       <ul class="collection" style="height: 140px; overflow-y: auto">
@@ -24,7 +26,7 @@
     </div>
   </section>
 
-  <section class="card">
+  <section class="card meetings">
     <div class="card-content">
       <div class="card-title">Upcoming Meetings</div>
       <ul class="collection">
@@ -33,7 +35,7 @@
     </div>
   </section>
 
-  <section class="card">
+  <section class="card participants">
     <div class="card-content">
       <div class="card-title">Who is in meetings</div>
       <ul class="collection">
