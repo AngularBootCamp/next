@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-// tslint:disable:import-blacklist
+// tslint:disable:no-submodule-imports
 // tslint:disable:ordered-imports
 // add the various operators
 import { Observable } from 'rxjs/Observable';
@@ -41,9 +41,9 @@ export class RedditSearchComponent {
       .filter(search => search !== '');
 
     const combinedCriteria$ = Observable.combineLatest(
-      validSubReddit$, validSearch$,
-      (subReddit, search) => ({ subReddit, search })
-    );
+      validSubReddit$,
+      validSearch$
+    ).map(([subReddit, search]) => ({ subReddit, search }));
 
     this.results = combinedCriteria$
       .do(x => console.log('change', x))
@@ -54,8 +54,8 @@ export class RedditSearchComponent {
           // Initially, show no results, while waiting.
           Observable.of([]),
           // Replace with results as they arrive, auto retry.
-          ris.search(val.subReddit, val.search)
-            .retry(3)
-        ));
+          ris.search(val.subReddit, val.search).retry(3)
+        )
+      );
   }
 }

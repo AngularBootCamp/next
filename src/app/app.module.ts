@@ -7,15 +7,8 @@ import { AppComponent } from './app.component';
 import { RedditSearchComponent } from './reddit-search/reddit-search.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RedditSearchComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
+  declarations: [AppComponent, RedditSearchComponent],
+  imports: [BrowserModule, HttpClientModule, ReactiveFormsModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
