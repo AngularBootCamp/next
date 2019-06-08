@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 
 const meetings = [
-  { description: 'Standup', participants: ['John', 'Paul', 'Ringo', 'George'] },
-  { description: 'Meet with the Bills', participants: ['Bill', 'Bill', 'Peter'] },
+  {
+    description: 'Standup',
+    participants: ['John', 'Paul', 'Ringo', 'George']
+  },
+  {
+    description: 'Meet with the Bills',
+    participants: ['Bill', 'Bill', 'Peter']
+  },
   { description: 'Working lunch', participants: ['Joe', 'Jane'] }
 ];
 

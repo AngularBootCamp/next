@@ -9,12 +9,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    EmployeeBrowserComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ]
+  declarations: [EmployeeBrowserComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)]
 })
-export class EmployeeBrowserModule { }
+export class EmployeeBrowserModule {}

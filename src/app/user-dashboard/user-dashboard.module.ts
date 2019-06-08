@@ -9,12 +9,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    UserDashboardComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ]
+  declarations: [UserDashboardComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)]
 })
-export class UserDashboardModule { }
+export class UserDashboardModule {}
