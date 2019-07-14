@@ -40,10 +40,10 @@ export class RedditSearchComponent {
       .distinctUntilChanged()
       .filter(search => search !== '');
 
-    const combinedCriteria$ = Observable.combineLatest(
+    const combinedCriteria$ = Observable.combineLatest([
       validSubReddit$,
       validSearch$
-    ).map(([subReddit, search]) => ({ subReddit, search }));
+    ]).map(([subReddit, search]) => ({ subReddit, search }));
 
     this.results = combinedCriteria$
       .do(x => console.log('change', x))
