@@ -36,11 +36,11 @@ https://github.com/AngularBootCamp/abc/blob/master/README.md
 [Step 204, class-and-style-bindings](https://github.com/AngularBootCamp/next/tree/class-and-style-bindings)
  (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/class-and-style-bindings))
 
-[Step 205, component-inputs](https://github.com/AngularBootCamp/next/tree/component-inputs)
- (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/component-inputs))
+[Step 205, input-data-bindings](https://github.com/AngularBootCamp/next/tree/input-data-bindings)
+ (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/input-data-bindings))
 
-[Step 206, component-events](https://github.com/AngularBootCamp/next/tree/component-events)
- (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/component-events))
+[Step 206, output-event-bindings](https://github.com/AngularBootCamp/next/tree/output-event-bindings)
+ (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/output-event-bindings))
 
 [Step 300, dependency-injection-and-http](https://github.com/AngularBootCamp/next/tree/dependency-injection-and-http)
  (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/dependency-injection-and-http))
@@ -209,6 +209,9 @@ https://github.com/AngularBootCamp/abc/blob/master/README.md
 
 [Step 815, legacy-observable-composing-and-chaining](https://github.com/AngularBootCamp/next/tree/legacy-observable-composing-and-chaining)
  (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/legacy-observable-composing-and-chaining))
+
+[Step 816, legacy-ngrx-effects](https://github.com/AngularBootCamp/next/tree/legacy-ngrx-effects)
+ (on [StackBlitz](https://stackblitz.io/github/AngularBootCamp/next/tree/legacy-ngrx-effects))
 
 (There are additional examples and materials available for advanced topics in class, which don’t fit well into the format presented here; your instructor will direct you to the relevant materials as those topics come up in class.)
 
