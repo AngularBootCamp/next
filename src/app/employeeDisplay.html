@@ -1,0 +1,11 @@
+<div class="card" *ngIf="employee">
+  <div class="card-content">
+    <div class="card-title">
+      Name: {{employee.first_name}} {{employee.last_name}}
+    </div>
+    <p>Email: <strong>{{employee.email}}</strong></p>
+    <p>Hours Worked: <strong>{{employee.hours_worked}}</strong></p>
+    <p>Hourly Wage: <strong>{{employee.hourly_wage}}</strong></p>
+    <hr />
+  </div>
+</div>
