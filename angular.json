@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "defaultProject": "template-events",
+  "defaultProject": "multiple-components",
   "newProjectRoot": "projects",
   "projects": {
-    "template-events": {
+    "multiple-components": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -45,7 +45,7 @@
             ],
             "index": "src/index.html",
             "main": "src/main.ts",
-            "outputPath": "dist/template-events",
+            "outputPath": "dist/multiple-components",
             "polyfills": "src/polyfills.ts",
             "scripts": [
             ],
@@ -62,18 +62,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "configurations": {
             "production": {
-              "devServerTarget": "template-events:serve:production"
+              "devServerTarget": "multiple-components:serve:production"
             }
           },
           "options": {
-            "devServerTarget": "template-events:serve",
+            "devServerTarget": "multiple-components:serve",
             "protractorConfig": "e2e/protractor.conf.js"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "template-events:build"
+            "browserTarget": "multiple-components:build"
           }
         },
         "lint": {
@@ -93,11 +93,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "template-events:build:production"
+              "browserTarget": "multiple-components:build:production"
             }
           },
           "options": {
-            "browserTarget": "template-events:build"
+            "browserTarget": "multiple-components:build"
           }
         },
         "test": {

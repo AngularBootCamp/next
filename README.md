@@ -1,4 +1,4 @@
-# Angular Boot Camp example: template-events
+# Angular Boot Camp example: multiple-components
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for template-events](https://stackblitz.io/github/AngularBootCamp/template-events)**
+**[StackBlitz for multiple-components](https://stackblitz.io/github/AngularBootCamp/multiple-components)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/template-events.git
-cd template-events
+git clone git@github.com:AngularBootCamp/multiple-components.git
+cd multiple-components
 npm install
 npm start
 ```
