@@ -1,0 +1,36 @@
+<table class="striped centered">
+  <thead>
+    <tr>
+      <td class="header center-align" *ngFor="let header of headers">
+        <app-employee-list-header
+          [propertyName]="header.propertyName"
+          [display]="header.display"
+          [options]="options"
+          (clicked)="headerClicked($event)"
+        ></app-employee-list-header>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>
+        <a
+          [routerLink]=""
+          [queryParams]="{ filter: employee.first_name }"
+        >
+          {{ employee.first_name }}
+        </a>
+      </td>
+      <td>
+        <a
+          [routerLink]=""
+          [queryParams]="{ filter: employee.last_name }"
+        >
+          {{ employee.last_name }}
+        </a>
+      </td>
+      <td>{{ employee.hours_worked }}</td>
+      <td>{{ employee.hourly_wage }}</td>
+    </tr>
+  </tbody>
+</table>

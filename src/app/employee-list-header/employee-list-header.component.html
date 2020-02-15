@@ -1,0 +1,13 @@
+<div class="pointer" (click)="clicked.emit(propertyName)">
+  {{ display }}
+  <span
+    *ngIf="options?.sortBy === propertyName"
+    class="material-icons orderby"
+  >
+    {{
+      options?.sortDirection === 'asc'
+        ? 'arrow_drop_down'
+        : 'arrow_drop_up'
+    }}
+  </span>
+</div>

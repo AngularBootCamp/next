@@ -1,0 +1,7 @@
+<app-employee-filter
+  [options]="tableOptions | async"
+></app-employee-filter>
+<app-employee-list
+  [employees]="employees | async"
+  [options]="tableOptions | async"
+></app-employee-list>
