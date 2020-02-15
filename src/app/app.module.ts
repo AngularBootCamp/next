@@ -1,12 +1,12 @@
-// STOP! - We will talk about this later
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { LoginComponent } from './login';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule],
-  bootstrap: [AppComponent]
+  declarations: [LoginComponent],
+  imports: [BrowserModule, FormsModule],
+  bootstrap: [LoginComponent]
 })
 export class AppModule {}
