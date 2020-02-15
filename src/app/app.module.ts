@@ -1,11 +1,11 @@
-// STOP! - We will talk about this later
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ContentWrapperComponent } from './content-wrapper.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContentWrapperComponent],
   imports: [BrowserModule],
   bootstrap: [AppComponent]
 })
