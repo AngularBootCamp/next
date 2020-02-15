@@ -1,12 +1,11 @@
-// STOP! - We will talk about this later
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { IfElseComponent } from './if-else.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [IfElseComponent],
   imports: [BrowserModule],
-  bootstrap: [AppComponent]
+  bootstrap: [IfElseComponent]
 })
 export class AppModule {}
