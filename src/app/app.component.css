@@ -1,0 +1,74 @@
+:host {
+  display: block;
+  min-width: 300px;
+  color: rgb(38, 35, 31); /* very dark grey from OD logo text */
+  background-color: white;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+a {
+  color: currentcolor;
+  font-weight: bold;
+}
+
+strong {
+  color: rgb(203, 36, 46); /* dark red from ABC logo text */
+  font-weight: bold;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-bottom: 2rem;
+  color: rgba(38, 35, 31, 0.7);
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.banner img {
+  /* Keep the SVGs from shrinking to 0x0. */
+  width: 100%;
+}
+
+.banner p {
+  margin: 1rem;
+}
+
+.offerings {
+  /* Use columns instead of a grid, so columns automatically stay
+   * balanced without having to artificially divide the markup into
+   * separate grid items.
+   */
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.offerings p {
+  margin-top: 0;
+}
+
+.call-to-action {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  /* Keep text centered even if it wraps. */
+  text-align: center;
+}
+
+/* Switch to a single-column view for narrow viewports. */
+@media (max-width: 700px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+
+  .banner p {
+    margin-top: 0;
+  }
+
+  .offerings {
+    column-count: 1;
+  }
+}

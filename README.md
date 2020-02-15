@@ -1,4 +1,4 @@
-# Angular Boot Camp example: template-conditionals-and-loops
+# Angular Boot Camp example: preparation-and-introduction
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for template-conditionals-and-loops](https://stackblitz.io/github/AngularBootCamp/template-conditionals-and-loops)**
+**[StackBlitz for preparation-and-introduction](https://stackblitz.io/github/AngularBootCamp/preparation-and-introduction)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/template-conditionals-and-loops.git
-cd template-conditionals-and-loops
+git clone git@github.com:AngularBootCamp/preparation-and-introduction.git
+cd preparation-and-introduction
 npm install
 npm start
 ```
