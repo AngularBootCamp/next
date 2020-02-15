@@ -1,53 +1,105 @@
-<div class="banner">
-  <a href="https://oasisdigital.com/" target="_blank">
-    <img src="assets/od-logo.svg" alt="Oasis Digital" />
-  </a>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Contact Details</div>
 
-  <p>the company behind</p>
-
-  <a href="https://angularbootcamp.com/" target="_blank">
-    <img src="assets/abc-logo.svg" alt="Angular Boot Camp" />
-  </a>
-</div>
-
-<div class="offerings">
-  <p>Established in 2001, Oasis Digital offers:</p>
-
-  <p>
-    Public <strong>Angular Boot Camp</strong> and other classes, both
-    online and in person. Purchase a ticket at our website, perfect
-    for one or a handful of developers.
-  </p>
-
-  <p>
-    <strong>Private classes</strong>, suitable for a team, also online
-    or in person. A private class can also include additional days for
-    specific additional topics or consulting assistance.
-  </p>
-
-  <p>
-    <strong>Consulting services</strong>, including project review,
-    planning and strategy assistance, co-development, and deployment
-    guidance.
-  </p>
-
-  <p>
-    <strong>Project launch</strong>, in which we start a project
-    rapidly with a good foundation and critical features, then
-    transition to an internal team.
-  </p>
-
-  <p>
-    <strong>Full project</strong> development with Angular, React,
-    Node, Java, and other technologies.
-  </p>
-</div>
-
-<div class="call-to-action">
-  <p>
-    Learn more at
-    <a href="https://oasisdigital.com/" target="_blank"
-      >oasisdigital.com</a
+    <form
+      [formGroup]="dynamicFormGroup"
+      (ngSubmit)="onSubmit()"
+      class="two-across"
     >
-  </p>
-</div>
+      <!-- Show each field defined in the schema. -->
+      <div *ngFor="let fieldinfo of schema">
+        <label [for]="fieldinfo.fieldname">
+          {{ fieldinfo.fieldlabel }}
+
+          <!-- Add a marker for mandatory fields. -->
+          <span class="mandatory-marker" *ngIf="fieldinfo.mandatory"
+            >*</span
+          >
+        </label>
+
+        <!-- Generate the appropriate type of input control. -->
+        <input
+          [type]="fieldinfo.fieldtype"
+          [name]="fieldinfo.fieldname"
+          [id]="fieldinfo.fieldname"
+          [formControlName]="fieldinfo.fieldname"
+        />
+
+        <!--
+          If the user has touched the control and it's invalid,
+          show the necessary error message.
+        -->
+        <div
+          class="error-message"
+          *ngIf="
+            controls[fieldinfo.fieldname].touched &&
+            controls[fieldinfo.fieldname].invalid
+          "
+        >
+          <span
+            *ngIf="controls[fieldinfo.fieldname].hasError('required')"
+            >{{ fieldinfo.fieldlabel }} is required.</span
+          >
+
+          <span
+            *ngIf="
+              controls[fieldinfo.fieldname].hasError('minlength')
+            "
+          >
+            {{ fieldinfo.fieldlabel }} must be at least
+            {{
+              controls[fieldinfo.fieldname].errors.minlength
+                .requiredLength
+            }}
+            characters long.
+          </span>
+
+          <span
+            *ngIf="
+              controls[fieldinfo.fieldname].hasError('maxlength')
+            "
+          >
+            {{ fieldinfo.fieldlabel }} cannot be more than
+            {{
+              controls[fieldinfo.fieldname].errors.maxlength
+                .requiredLength
+            }}
+            characters long.
+          </span>
+
+          <span
+            *ngIf="controls[fieldinfo.fieldname].hasError('pattern')"
+          >
+            {{ fieldinfo.fieldlabel }} is incorrect.
+          </span>
+          <!-- end error messages -->
+        </div>
+      </div>
+
+      <button
+        class="btn"
+        [disabled]="!dynamicFormGroup.valid"
+        [class.disabled]="!dynamicFormGroup.valid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Form Data</div>
+
+    Form Value Object:
+    <pre>{{ dynamicFormGroup.value | json }}</pre>
+
+    Form Validity:
+    <div>{{ dynamicFormGroup.valid }}</div>
+
+    <button class="btn" (click)="logTheForm()">
+      Log Form Object
+    </button>
+  </div>
+</section>
