@@ -1,53 +1,80 @@
-<div class="banner">
-  <a href="https://oasisdigital.com/" target="_blank">
-    <img src="assets/od-logo.svg" alt="Oasis Digital" />
-  </a>
+<div class="two-across">
+  <section class="card">
+    <div class="card-content">
+      <div class="card-title">
+        checkmark Pipe
+      </div>
+      <p>True: {{ true | checkmark }}</p>
+      <p>False: {{ false | checkmark }}</p>
+      <p>Truthy: {{ value12345 | checkmark }}</p>
+      <p>Falsy: {{ valueEmptyString | checkmark }}</p>
+      <p>Truthy: {{ valueHi | checkmark }}</p>
+      <p>Falsy: {{ null | checkmark }}</p>
+    </div>
+  </section>
 
-  <p>the company behind</p>
+  <section class="card">
+    <div class="card-content">
+      <div class="card-title">
+        toCaps Pipe; also, chaining
+      </div>
+      <p>{{ 'yelling' }}</p>
+      <p>{{ 'yelling' | toCaps }}</p>
+      <p>{{ 'yelling' | toCaps | lowercase }}</p>
+      <p>{{ 'yelling' | toCaps | lowercase | uppercase }}</p>
+      <p>{{ myDate | date | uppercase }}</p>
+      <p>{{ value12345 | toCaps }}</p>
+    </div>
+  </section>
 
-  <a href="https://angularbootcamp.com/" target="_blank">
-    <img src="assets/abc-logo.svg" alt="Angular Boot Camp" />
-  </a>
-</div>
+  <section class="card">
+    <div class="card-content">
+      <div class="card-title">
+        containsX Pipe
+      </div>
 
-<div class="offerings">
-  <p>Established in 2001, Oasis Digital offers:</p>
+      <div>Full list:</div>
+      <ul class="collection">
+        <li class="collection-item" *ngFor="let item of items">
+          {{ item }}
+        </li>
+      </ul>
 
-  <p>
-    Public <strong>Angular Boot Camp</strong> and other classes, both
-    online and in person. Purchase a ticket at our website, perfect
-    for one or a handful of developers.
-  </p>
+      <div>Filtered list:</div>
+      <ul class="collection">
+        <!--<li *ngFor="let item of (items | containsX:'abc')"> {{item}}</li>-->
+        <!--<li *ngFor="let item of containsX(items, 'abc')"> {{item}}</li> -->
+        <li
+          class="collection-item"
+          *ngFor="let item of items | containsX: 'abc'"
+        >
+          {{ item }}
+        </li>
+      </ul>
+      <div></div>
+    </div>
+  </section>
 
-  <p>
-    <strong>Private classes</strong>, suitable for a team, also online
-    or in person. A private class can also include additional days for
-    specific additional topics or consulting assistance.
-  </p>
+  <section class="card">
+    <div class="card-content">
+      <div class="card-title">fieldRange Pipe</div>
 
-  <p>
-    <strong>Consulting services</strong>, including project review,
-    planning and strategy assistance, co-development, and deployment
-    guidance.
-  </p>
+      <div>Full list:</div>
+      <ul class="collection">
+        <li class="collection-item" *ngFor="let c of cars">
+          {{ c.year }} {{ c.color }} {{ c.brand }}
+        </li>
+      </ul>
 
-  <p>
-    <strong>Project launch</strong>, in which we start a project
-    rapidly with a good foundation and critical features, then
-    transition to an internal team.
-  </p>
-
-  <p>
-    <strong>Full project</strong> development with Angular, React,
-    Node, Java, and other technologies.
-  </p>
-</div>
-
-<div class="call-to-action">
-  <p>
-    Learn more at
-    <a href="https://oasisdigital.com/" target="_blank"
-      >oasisdigital.com</a
-    >
-  </p>
+      <div>Filtered list:</div>
+      <ul class="collection">
+        <li
+          class="collection-item"
+          *ngFor="let c of cars | fieldRange: 'year':2009:2013"
+        >
+          {{ c.year }} {{ c.color }} {{ c.brand }}
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
