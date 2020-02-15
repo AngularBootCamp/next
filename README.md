@@ -1,4 +1,4 @@
-# Angular Boot Camp example: preparation-and-introduction
+# Angular Boot Camp example: my-first-angular-app
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for preparation-and-introduction](https://stackblitz.io/github/AngularBootCamp/preparation-and-introduction)**
+**[StackBlitz for my-first-angular-app](https://stackblitz.io/github/AngularBootCamp/my-first-angular-app)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/preparation-and-introduction.git
-cd preparation-and-introduction
+git clone git@github.com:AngularBootCamp/my-first-angular-app.git
+cd my-first-angular-app
 npm install
 npm start
 ```
