@@ -1,4 +1,3 @@
-// STOP! - We will talk about this later
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
