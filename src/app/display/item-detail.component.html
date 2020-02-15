@@ -1,0 +1,9 @@
+<div
+  *ngIf="item"
+  class="collection-item"
+  style="cursor: pointer;"
+  (click)="toggle.emit()"
+>
+  <h5>{{ item.name }}: {{ item.completed }}</h5>
+  <p>{{ item.description }}</p>
+</div>
