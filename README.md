@@ -1,4 +1,4 @@
-# Angular Boot Camp example: preparation-and-introduction
+# Angular Boot Camp example: class-and-style-bindings
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for preparation-and-introduction](https://stackblitz.io/github/AngularBootCamp/preparation-and-introduction)**
+**[StackBlitz for class-and-style-bindings](https://stackblitz.io/github/AngularBootCamp/class-and-style-bindings)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/preparation-and-introduction.git
-cd preparation-and-introduction
+git clone git@github.com:AngularBootCamp/class-and-style-bindings.git
+cd class-and-style-bindings
 npm install
 npm start
 ```
@@ -44,4 +44,4 @@ We offer:
 
 <img src="https://oasisdigital.com/images/od-logo.svg" width="379" height="143" />
 
-Copyright 2016-2018 Oasis Digital Solutions Inc.
+Copyright 2016-2020 Oasis Digital Solutions Inc.

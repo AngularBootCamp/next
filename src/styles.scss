@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+.bar.bonus {
+  background-color: green;
+}
+
+.bar.fired {
+  background-color: red;
+}
+
+.bar {
+  height: 10px;
+  background-color: darkblue;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stripe {
+  background-color: gainsboro;
+}
+
+.region-eastern {
+  background-color: lightblue;
+}
+
+.region-central {
+  background-color: lightcoral;
+}
+
+.region-western {
+  background-color: lightseagreen;
+}
+
+.employee-name {
+  font-weight: bold;
+}
+
+.financial-report {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.financial-report th,
+.financial-report td {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.financial-report .employee-column {
+  width: 25%;
+}
+
+.financial-report .units-column,
+.financial-report .revenue-column {
+  width: 37.5%;
+}
