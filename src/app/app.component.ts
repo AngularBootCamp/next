@@ -1,23 +1,33 @@
 import { Component } from '@angular/core';
 
+import { scheduleMap } from './app.constants';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  employee = 'John Doe';
-  // Implicit public, equivalent to
-  // public employee: string;
-  // (public is the default in TypeScript.)
-  // Angular.io style guide recommends implicit public.
+  name = 'John Doe';
+  message = 'Please Clock In';
+  currentSchedule = 'Hover to see selected work times';
 
-  // If the value is known at initialization, it is ok to do so here.
-  // Later we will see the constructor used to set these properties
-  daysWorked = 81;
-  company = { name: 'Acme, Inc.' };
+  clockIn(event: MouseEvent) {
+    if (event.shiftKey) {
+      this.message = 'Clocked in as manager!';
+    } else {
+      this.message = 'Clocked in as employee';
+    }
+  }
 
-  employeeOfTheWeek = {
-    name: 'Jane Smith',
-    picture: 'assets/avatar.png'
-  };
+  clockOut() {
+    this.message = 'Have a nice day!';
+  }
+
+  showSchedule(day: string) {
+    this.currentSchedule = scheduleMap[day];
+  }
+
+  clearSchedule() {
+    this.currentSchedule = 'Hover to see selected work times';
+  }
 }

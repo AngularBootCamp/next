@@ -1,4 +1,4 @@
-# Angular Boot Camp example: data-binding
+# Angular Boot Camp example: template-events
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for data-binding](https://stackblitz.io/github/AngularBootCamp/data-binding)**
+**[StackBlitz for template-events](https://stackblitz.io/github/AngularBootCamp/template-events)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/data-binding.git
-cd data-binding
+git clone git@github.com:AngularBootCamp/template-events.git
+cd template-events
 npm install
 npm start
 ```
