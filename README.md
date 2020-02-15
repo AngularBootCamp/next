@@ -1,4 +1,4 @@
-# Angular Boot Camp example: preparation-and-introduction
+# Angular Boot Camp example: create-new-project
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for preparation-and-introduction](https://stackblitz.io/github/AngularBootCamp/preparation-and-introduction)**
+**[StackBlitz for create-new-project](https://stackblitz.io/github/AngularBootCamp/create-new-project)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/preparation-and-introduction.git
-cd preparation-and-introduction
+git clone git@github.com:AngularBootCamp/create-new-project.git
+cd create-new-project
 npm install
 npm start
 ```
@@ -44,4 +44,4 @@ We offer:
 
 <img src="https://oasisdigital.com/images/od-logo.svg" width="379" height="143" />
 
-Copyright 2016-2018 Oasis Digital Solutions Inc.
+Copyright 2016-2020 Oasis Digital Solutions Inc.
