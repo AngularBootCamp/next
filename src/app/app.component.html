@@ -1,53 +1,68 @@
-<div class="banner">
-  <a href="https://oasisdigital.com/" target="_blank">
-    <img src="assets/od-logo.svg" alt="Oasis Digital" />
-  </a>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Login Form</div>
 
-  <p>the company behind</p>
+    <form [formGroup]="loginFormGroup" (ngSubmit)="onLogin()">
+      <div class="four-across">
+        <label>
+          <span>Login</span>
+          <input type="text" formControlName="login" />
+          <span
+            *ngIf="loginFormGroup.get('login')?.hasError('required')"
+            >Username is required</span
+          >
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" formControlName="password" />
+          <span
+            *ngIf="
+              loginFormGroup.get('password')?.hasError('required')
+            "
+            >Password is required</span
+          >
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" formControlName="confirmPassword" />
+          <span *ngIf="loginFormGroup.hasError('mismatched')"
+            >Passwords must match</span
+          >
+        </label>
+        <label>
+          <span>Please enter 5 here:</span>
+          <input type="text" formControlName="enterFive" />
+          <span
+            *ngIf="
+              loginFormGroup.get('enterFive')?.hasError('verifyFive')
+            "
+            >You must enter 5</span
+          >
+        </label>
+      </div>
+      <button
+        [disabled]="!loginFormGroup.valid"
+        class="btn"
+        [class.disabled]="!loginFormGroup.valid"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</section>
 
-  <a href="https://angularbootcamp.com/" target="_blank">
-    <img src="assets/abc-logo.svg" alt="Angular Boot Camp" />
-  </a>
-</div>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Form Data</div>
 
-<div class="offerings">
-  <p>Established in 2001, Oasis Digital offers:</p>
+    Form Value Object:
+    <pre>{{ loginFormGroup.value | json }}</pre>
 
-  <p>
-    Public <strong>Angular Boot Camp</strong> and other classes, both
-    online and in person. Purchase a ticket at our website, perfect
-    for one or a handful of developers.
-  </p>
+    Form Validity:
+    <div>{{ loginFormGroup.valid }}</div>
 
-  <p>
-    <strong>Private classes</strong>, suitable for a team, also online
-    or in person. A private class can also include additional days for
-    specific additional topics or consulting assistance.
-  </p>
-
-  <p>
-    <strong>Consulting services</strong>, including project review,
-    planning and strategy assistance, co-development, and deployment
-    guidance.
-  </p>
-
-  <p>
-    <strong>Project launch</strong>, in which we start a project
-    rapidly with a good foundation and critical features, then
-    transition to an internal team.
-  </p>
-
-  <p>
-    <strong>Full project</strong> development with Angular, React,
-    Node, Java, and other technologies.
-  </p>
-</div>
-
-<div class="call-to-action">
-  <p>
-    Learn more at
-    <a href="https://oasisdigital.com/" target="_blank"
-      >oasisdigital.com</a
-    >
-  </p>
-</div>
+    <button class="btn" (click)="logTheForm()">
+      Log Form Object
+    </button>
+  </div>
+</section>
