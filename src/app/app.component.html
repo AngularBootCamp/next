@@ -1,53 +1,22 @@
-<div class="banner">
-  <a href="https://oasisdigital.com/" target="_blank">
-    <img src="assets/od-logo.svg" alt="Oasis Digital" />
-  </a>
+<p>Hello, {{ employee }}.</p>
 
-  <p>the company behind</p>
+<p>Days worked: <span [textContent]="daysWorked"></span></p>
 
-  <a href="https://angularbootcamp.com/" target="_blank">
-    <img src="assets/abc-logo.svg" alt="Angular Boot Camp" />
-  </a>
-</div>
+<p>
+  Days until next vacation: <strong>{{ 365 - daysWorked }}</strong>
+</p>
 
-<div class="offerings">
-  <p>Established in 2001, Oasis Digital offers:</p>
+<p>
+  Thank you for being a dedicated employee of {{ company.name + '!' }}
+</p>
 
-  <p>
-    Public <strong>Angular Boot Camp</strong> and other classes, both
-    online and in person. Purchase a ticket at our website, perfect
-    for one or a handful of developers.
-  </p>
+<img
+  [src]="employeeOfTheWeek.picture"
+  [alt]="employeeOfTheWeek.name"
+/>
 
-  <p>
-    <strong>Private classes</strong>, suitable for a team, also online
-    or in person. A private class can also include additional days for
-    specific additional topics or consulting assistance.
-  </p>
-
-  <p>
-    <strong>Consulting services</strong>, including project review,
-    planning and strategy assistance, co-development, and deployment
-    guidance.
-  </p>
-
-  <p>
-    <strong>Project launch</strong>, in which we start a project
-    rapidly with a good foundation and critical features, then
-    transition to an internal team.
-  </p>
-
-  <p>
-    <strong>Full project</strong> development with Angular, React,
-    Node, Java, and other technologies.
-  </p>
-</div>
-
-<div class="call-to-action">
-  <p>
-    Learn more at
-    <a href="https://oasisdigital.com/" target="_blank"
-      >oasisdigital.com</a
-    >
-  </p>
-</div>
+<p
+  [textContent]="
+    'Employee of the week is ' + employeeOfTheWeek.name + '!!'
+  "
+></p>
