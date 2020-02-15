@@ -1,53 +1,52 @@
-<div class="banner">
-  <a href="https://oasisdigital.com/" target="_blank">
-    <img src="assets/od-logo.svg" alt="Oasis Digital" />
-  </a>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Input Form</div>
 
-  <p>the company behind</p>
-
-  <a href="https://angularbootcamp.com/" target="_blank">
-    <img src="assets/abc-logo.svg" alt="Angular Boot Camp" />
-  </a>
-</div>
-
-<div class="offerings">
-  <p>Established in 2001, Oasis Digital offers:</p>
-
-  <p>
-    Public <strong>Angular Boot Camp</strong> and other classes, both
-    online and in person. Purchase a ticket at our website, perfect
-    for one or a handful of developers.
-  </p>
-
-  <p>
-    <strong>Private classes</strong>, suitable for a team, also online
-    or in person. A private class can also include additional days for
-    specific additional topics or consulting assistance.
-  </p>
-
-  <p>
-    <strong>Consulting services</strong>, including project review,
-    planning and strategy assistance, co-development, and deployment
-    guidance.
-  </p>
-
-  <p>
-    <strong>Project launch</strong>, in which we start a project
-    rapidly with a good foundation and critical features, then
-    transition to an internal team.
-  </p>
-
-  <p>
-    <strong>Full project</strong> development with Angular, React,
-    Node, Java, and other technologies.
-  </p>
-</div>
-
-<div class="call-to-action">
-  <p>
-    Learn more at
-    <a href="https://oasisdigital.com/" target="_blank"
-      >oasisdigital.com</a
+    <form
+      [formGroup]="inputFormGroup"
+      (ngSubmit)="onFormSubmit()"
+      class="two-across"
     >
-  </p>
-</div>
+      <label>
+        <span>Enter Input</span>
+        <input type="text" formControlName="input" />
+        {{ inputFormGroup.get('input')?.errors | json }}
+      </label>
+
+      <label>
+        <span>Enter a Western ZIP code</span>
+        <input type="text" formControlName="zip" />
+        {{ inputFormGroup.get('zip')?.errors | json }}
+        <span *ngIf="inputFormGroup.get('zip')?.pending">
+          Pending Spinner Goes Here
+        </span>
+      </label>
+
+      <div>
+        <button
+          [disabled]="!inputFormGroup.valid"
+          class="btn"
+          [class.disabled]="!inputFormGroup.valid"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Form Data</div>
+
+    Form Value Object:
+    <pre>{{ inputFormGroup.value | json }}</pre>
+
+    Form Validity:
+    <div>{{ inputFormGroup.valid }}</div>
+
+    <button class="btn" (click)="logTheForm()">
+      Log Form Object
+    </button>
+  </div>
+</section>
