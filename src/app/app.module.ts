@@ -1,12 +1,27 @@
-// STOP! - We will talk about this later
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {
+  AnnouncementComponent,
+  AnnouncementComponentTagsDirective
+} from './announcement';
+import {
+  CollectionPanelComponent,
+  CollectionPanelComponentTagsDirective
+} from './collection-panel';
+import { NewsComponent } from './news';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule],
-  bootstrap: [AppComponent]
+  declarations: [
+    NewsComponent,
+    CollectionPanelComponent,
+    CollectionPanelComponentTagsDirective,
+    AnnouncementComponent,
+    AnnouncementComponentTagsDirective
+  ],
+  imports: [BrowserModule, FormsModule],
+  bootstrap: [NewsComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
