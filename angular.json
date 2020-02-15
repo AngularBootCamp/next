@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "defaultProject": "preparation-and-introduction",
+  "defaultProject": "output-event-bindings",
   "newProjectRoot": "projects",
   "projects": {
-    "preparation-and-introduction": {
+    "output-event-bindings": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -45,7 +45,7 @@
             ],
             "index": "src/index.html",
             "main": "src/main.ts",
-            "outputPath": "dist/preparation-and-introduction",
+            "outputPath": "dist/output-event-bindings",
             "polyfills": "src/polyfills.ts",
             "scripts": [
             ],
@@ -62,18 +62,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "configurations": {
             "production": {
-              "devServerTarget": "preparation-and-introduction:serve:production"
+              "devServerTarget": "output-event-bindings:serve:production"
             }
           },
           "options": {
-            "devServerTarget": "preparation-and-introduction:serve",
+            "devServerTarget": "output-event-bindings:serve",
             "protractorConfig": "e2e/protractor.conf.js"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "preparation-and-introduction:build"
+            "browserTarget": "output-event-bindings:build"
           }
         },
         "lint": {
@@ -93,11 +93,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "preparation-and-introduction:build:production"
+              "browserTarget": "output-event-bindings:build:production"
             }
           },
           "options": {
-            "browserTarget": "preparation-and-introduction:build"
+            "browserTarget": "output-event-bindings:build"
           }
         },
         "test": {
