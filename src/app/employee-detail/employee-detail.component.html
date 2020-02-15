@@ -1,0 +1,20 @@
+<section class="card">
+  <div class="card-content">
+    <ng-container *ngIf="employee | async as emp">
+      <div class="card-title">
+        Name: {{ emp.first_name }} {{ emp.last_name }}
+      </div>
+      <p>
+        Email: <strong>{{ emp.email }}</strong>
+      </p>
+      <p>
+        Hours Worked: <strong>{{ emp.hours_worked }}</strong>
+      </p>
+      <p>
+        Hourly Wage: <strong>{{ emp.hourly_wage }}</strong>
+      </p>
+      <hr />
+      <a routerLink="/employees">Back to list</a>
+    </ng-container>
+  </div>
+</section>
