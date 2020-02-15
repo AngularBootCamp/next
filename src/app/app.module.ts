@@ -1,14 +1,12 @@
-import { HttpClientModule } from '@angular/common/http';
+// STOP! - We will talk about this later
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { RedditSearchComponent } from './reddit-search/reddit-search.component';
 
 @NgModule({
-  declarations: [AppComponent, RedditSearchComponent],
-  imports: [BrowserModule, HttpClientModule, ReactiveFormsModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
