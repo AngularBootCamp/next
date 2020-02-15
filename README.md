@@ -1,4 +1,4 @@
-# Angular Boot Camp example: my-first-angular-app
+# Angular Boot Camp example: data-binding
 
 <img src="https://angularbootcamp.com/images/angular-boot-camp-logo.svg" width="394" height="106" />
 
@@ -7,13 +7,13 @@
 The fast and easy way to use this example is via
 [StackBlitz](https://stackblitz.io/):
 
-**[StackBlitz for my-first-angular-app](https://stackblitz.io/github/AngularBootCamp/my-first-angular-app)**
+**[StackBlitz for data-binding](https://stackblitz.io/github/AngularBootCamp/data-binding)**
 
 Alternatively, you can clone the repository locally to run the example:
 
 ```
-git clone git@github.com:AngularBootCamp/my-first-angular-app.git
-cd my-first-angular-app
+git clone git@github.com:AngularBootCamp/data-binding.git
+cd data-binding
 npm install
 npm start
 ```

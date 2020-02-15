@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "defaultProject": "my-first-angular-app",
+  "defaultProject": "data-binding",
   "newProjectRoot": "projects",
   "projects": {
-    "my-first-angular-app": {
+    "data-binding": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -45,7 +45,7 @@
             ],
             "index": "src/index.html",
             "main": "src/main.ts",
-            "outputPath": "dist/my-first-angular-app",
+            "outputPath": "dist/data-binding",
             "polyfills": "src/polyfills.ts",
             "scripts": [
             ],
@@ -62,18 +62,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "configurations": {
             "production": {
-              "devServerTarget": "my-first-angular-app:serve:production"
+              "devServerTarget": "data-binding:serve:production"
             }
           },
           "options": {
-            "devServerTarget": "my-first-angular-app:serve",
+            "devServerTarget": "data-binding:serve",
             "protractorConfig": "e2e/protractor.conf.js"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-first-angular-app:build"
+            "browserTarget": "data-binding:build"
           }
         },
         "lint": {
@@ -93,11 +93,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-first-angular-app:build:production"
+              "browserTarget": "data-binding:build:production"
             }
           },
           "options": {
-            "browserTarget": "my-first-angular-app:build"
+            "browserTarget": "data-binding:build"
           }
         },
         "test": {
