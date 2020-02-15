@@ -1,53 +1,113 @@
-<div class="banner">
-  <a href="https://oasisdigital.com/" target="_blank">
-    <img src="assets/od-logo.svg" alt="Oasis Digital" />
-  </a>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Glossary of Useful Terms</div>
 
-  <p>the company behind</p>
+    <dl>
+      <ng-container *ngFor="let term of terms">
+        <dt>{{ term.term }}</dt>
+        <dd>{{ term.definition }}</dd>
+      </ng-container>
+    </dl>
+  </div>
+</section>
 
-  <a href="https://angularbootcamp.com/" target="_blank">
-    <img src="assets/abc-logo.svg" alt="Angular Boot Camp" />
-  </a>
-</div>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Important Programming Languages</div>
 
-<div class="offerings">
-  <p>Established in 2001, Oasis Digital offers:</p>
+    <button class="btn" (click)="showDetails = !showDetails">
+      {{ showDetails ? 'Hide' : 'Show' }} Details
+    </button>
 
-  <p>
-    Public <strong>Angular Boot Camp</strong> and other classes, both
-    online and in person. Purchase a ticket at our website, perfect
-    for one or a handful of developers.
-  </p>
+    <table class="bordered">
+      <ng-container *ngFor="let langInfo of programmingLanguages">
+        <tr class="grey lighten-2 z-depth-3">
+          <td colspan="2">
+            <strong>{{ langInfo.language }}</strong>
+          </td>
+        </tr>
 
-  <p>
-    <strong>Private classes</strong>, suitable for a team, also online
-    or in person. A private class can also include additional days for
-    specific additional topics or consulting assistance.
-  </p>
+        <ng-container *ngIf="showDetails">
+          <tr>
+            <td>Designer:</td>
+            <td>{{ langInfo.designer }}</td>
+          </tr>
 
-  <p>
-    <strong>Consulting services</strong>, including project review,
-    planning and strategy assistance, co-development, and deployment
-    guidance.
-  </p>
+          <tr>
+            <td>Released:</td>
+            <td>{{ langInfo.released }}</td>
+          </tr>
 
-  <p>
-    <strong>Project launch</strong>, in which we start a project
-    rapidly with a good foundation and critical features, then
-    transition to an internal team.
-  </p>
+          <tr>
+            <td>More info:</td>
+            <td>
+              <a href="{{ langInfo.link }}" target="_blank">
+                {{ langInfo.link }}
+              </a>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </table>
+  </div>
+</section>
 
-  <p>
-    <strong>Full project</strong> development with Angular, React,
-    Node, Java, and other technologies.
-  </p>
-</div>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Purple Prose</div>
 
-<div class="call-to-action">
-  <p>
-    Learn more at
-    <a href="https://oasisdigital.com/" target="_blank"
-      >oasisdigital.com</a
-    >
-  </p>
-</div>
+    <!-- This should use a reactive control instead -->
+    <label>
+      Descriptiveness:
+      <input
+        type="range"
+        min="0"
+        max="10"
+        step="0.1"
+        [formControl]="descriptorsControl"
+      />
+    </label>
+
+    <!-- Compare the DOM for the span and ng-container versions. -->
+
+    <label>Using span:</label>
+
+    <p style="margin-bottom: 10px;">
+      It was a
+
+      <span
+        *ngFor="
+          let adjective of adjectives;
+          let isFirst = first;
+          let isLast = last
+        "
+      >
+        <span *ngIf="!isFirst && isLast">and</span>
+        {{ adjective
+        }}<span *ngIf="adjectives.length >= 3 && !isLast">, </span>
+      </span>
+      night.
+    </p>
+
+    <label>Using ng-container:</label>
+
+    <p style="margin-bottom: 10px;">
+      It was a
+
+      <ng-container
+        *ngFor="
+          let adjective of adjectives;
+          let isFirst = first;
+          let isLast = last
+        "
+      >
+        <ng-container *ngIf="!isFirst && isLast">and</ng-container>
+        {{ adjective
+        }}<ng-container *ngIf="adjectives.length >= 3 && !isLast"
+          >,
+        </ng-container>
+      </ng-container>
+      night.
+    </p>
+  </div>
+</section>
