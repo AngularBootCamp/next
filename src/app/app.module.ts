@@ -1,12 +1,12 @@
-// STOP! - We will talk about this later
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { SingleControlComponent } from './singleControl';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule],
-  bootstrap: [AppComponent]
+  declarations: [SingleControlComponent],
+  imports: [BrowserModule, ReactiveFormsModule],
+  bootstrap: [SingleControlComponent]
 })
 export class AppModule {}
