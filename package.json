@@ -1,5 +1,5 @@
 {
-  "name": "@angularbootcamp/preparation-and-introduction",
+  "name": "@angularbootcamp/legacy-observable-composing-and-chaining",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "scripts": {
@@ -27,6 +27,8 @@
     "core-js": "^2.6.11",
     "hammerjs": "^2.0.8",
     "jasmine": "^3.5.0",
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15",
     "material-design-icons-iconfont": "^5.0.1",
     "materialize-css": "0.100.2",
     "rxjs": "6.5.4",
